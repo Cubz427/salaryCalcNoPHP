@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netto calc</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<div class="mainWrapper" id="mainWrapper">
+    <h3>Netto algas kalkulātors 101</h3>
+
+    <!--  ievadaInfo  -->
+
+    <div class="inputField" id="inputField">
+        <label for="inputField">Norādiet mēnešalgu pirms nodokļiem,EUR:</label>
+    </div>
+        <div class="input">
+            <input class="slider" id="slider" type="range" name="rangeInput" min="0" max="5000" onchange="updateTextInput(this.value);">
+            <input class="window" type="number" id="input" value="">
+        </div>
+    </div>
+
+    <!-- Gramata -->
+
+
+    <div class="gramata">
+        <label for="gramata">Vai algas nodokļu grāmatiņa ir iesniegta darba devējam?
+        </label>
+            <select name="gramata" id="book">
+                <option value="0.23">Jā</option>
+                <option value="0.31">Nē</option>
+            </select>
+    </div>
+    
+    <!-- Poga -->
+
+    <div class="button">
+        <button type="button" class="submit" id="submit" onclick="getInputValue();">Apreiķināt</button>
+    </div>
+
+    <!-- Izvads -->
+
+    <div class="apreikins">
+        <label for="apreikins">Jūsu netto alga, EUR:</label>
+        <input type="text" id="answer" value="" readonly>
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
